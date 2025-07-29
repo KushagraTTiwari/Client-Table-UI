@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { ClientsContext } from '../context/ClientContext';
 
 const SortPanel = () => {
-  const [sortField, setSortField] = useState('name');
+  const [sortField, setSortField] = useState('clientName');
   const [sortOrder, setSortOrder] = useState('asc');
   const { setClients } = useContext(ClientsContext);
 
@@ -25,7 +25,7 @@ const SortPanel = () => {
           onChange={(e) => setSortField(e.target.value)}
           className="border rounded px-2 py-1"
         >
-          <option value="name">Name</option>
+          <option value="clientName">Name</option>
           <option value="createdAt">Created At</option>
           <option value="email">Email</option>
         </select>
